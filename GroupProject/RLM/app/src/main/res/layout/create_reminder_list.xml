@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/newReminderListName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20sp"
+        android:background="@color/gray"
+        android:fontFamily="monospace"
+        android:hint="Enter New Reminder List Name"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_reminder_list_header" />
+
+    <TextView
+        android:id="@+id/create_reminder_list_header"
+        android:layout_width="412dp"
+        android:layout_height="80dp"
+        android:background="#33BC9C"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="NEW REMINDER LIST"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/createReminderListButton"
+        android:layout_width="169dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="46dp"
+        android:fontFamily="monospace"
+        android:text="CREATE"
+        android:textSize="16sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newReminderListName" />
+
+    <Button
+        android:id="@+id/returnToReminderListView"
+        android:layout_width="169dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="monospace"
+        android:text="CANCEL"
+        android:textSize="16sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newReminderListName" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="203dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="364dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/create_reminder_list_header"
+        app:srcCompat="@android:drawable/screen_background_light_transparent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

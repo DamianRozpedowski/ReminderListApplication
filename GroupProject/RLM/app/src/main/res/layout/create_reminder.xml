@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/pageHeader"
+        android:layout_width="412dp"
+        android:layout_height="80dp"
+        android:background="#33BC9C"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="NEW REMINDER"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/reminderContentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="monospace"
+        android:text="Content:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rTypeLabel" />
+
+    <Switch
+        android:id="@+id/dateTimeAlert"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="23dp"
+        android:background="@color/gray"
+        android:fontFamily="monospace"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="Date/Time Alert"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reminderContentText" />
+
+    <Switch
+        android:id="@+id/repeatReminderSwitch"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="23dp"
+        android:background="@color/gray"
+        android:fontFamily="monospace"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="Repeat Reminder"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateLabel" />
+
+    <EditText
+        android:id="@+id/reminderLocation"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationAlert" />
+
+    <TextView
+        android:id="@+id/timeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="23dp"
+        android:fontFamily="monospace"
+        android:text="Time:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/reminderDate"
+        app:layout_constraintTop_toBottomOf="@+id/dateTimeAlert" />
+
+    <EditText
+        android:id="@+id/reminderTime"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:inputType="time"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/timeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/dateTimeAlert" />
+
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="23dp"
+        android:fontFamily="monospace"
+        android:text="Date:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateTimeAlert" />
+
+    <EditText
+        android:id="@+id/reminderDate"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:inputType="date"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/dateLabel"
+        app:layout_constraintTop_toBottomOf="@+id/dateTimeAlert" />
+
+    <TextView
+        android:id="@+id/repLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="monospace"
+        android:text="Day(s)"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeatReminderSwitch" />
+
+    <TextView
+        android:id="@+id/locationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="23dp"
+        android:fontFamily="monospace"
+        android:text="Location:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationAlert" />
+
+    <Switch
+        android:id="@+id/locationAlert"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="23dp"
+        android:background="@color/gray"
+        android:fontFamily="monospace"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="Location Alert"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repLabel" />
+
+    <EditText
+        android:id="@+id/repAmount"
+        android:layout_width="88dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/repLabel2"
+        app:layout_constraintStart_toEndOf="@+id/repLabel"
+        app:layout_constraintTop_toBottomOf="@+id/repeatReminderSwitch" />
+
+    <TextView
+        android:id="@+id/repLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="23dp"
+        android:fontFamily="monospace"
+        android:text="Repeat Alert Every"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeatReminderSwitch" />
+
+    <AutoCompleteTextView
+        android:id="@+id/reminderContent"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="monospace"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rTypeInput" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="169dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="monospace"
+        android:text="CANCEL"
+        android:textSize="16sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/addNewButton"
+        android:layout_width="169dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="monospace"
+        android:text="ADD REMINDER"
+        android:textSize="16sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/rNameInput"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="monospace"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pageHeader" />
+
+    <TextView
+        android:id="@+id/liNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="23dp"
+        android:fontFamily="monospace"
+        android:text="Name:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pageHeader" />
+
+    <TextView
+        android:id="@+id/rTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="monospace"
+        android:text="Type:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/rTypeInput"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liNameLabel" />
+
+    <AutoCompleteTextView
+        android:id="@+id/rTypeInput"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="monospace"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rNameInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

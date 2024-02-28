@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GLM</string>
+    <string name="listName">Weekly Reminders</string>
+    <string name="reminderName">My reminder</string>
+    <string name="channel_name">REMINDER_CHANNEL</string>
+    <string name="channel_description">REMINDER_DESC</string>
+</resources>
